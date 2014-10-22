@@ -142,9 +142,6 @@
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>2.4</version>
 					<configuration>
-						<excludes>
-							<exclude>**/.svn</exclude>
-						</excludes>
 						<archive>
 							<manifest>
 								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -505,17 +502,17 @@
 		<maven>3.1.0</maven>
 	</prerequisites>
 	<issueManagement>
-		<system>Google Code</system>
-		<url>http://code.google.com/p/matrixjavalib/issues/list</url>
+		<system>GitHub</system>
+		<url>https://github.com/tweea/matrixjavalib-main-genesis/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>continuum</system>
 		<url>http://192.168.1.100:8082/continuum</url>
 	</ciManagement>
 	<scm>
-		<connection>scm:svn:http://matrixjavalib.googlecode.com/svn/main/trunk/mvn-genesis</connection>
-		<developerConnection>scm:svn:https://matrixjavalib.googlecode.com/svn/main/trunk/mvn-genesis</developerConnection>
-		<url>http://code.google.com/p/matrixjavalib/source/browse/main/trunk/mvn-genesis</url>
+		<connection>scm:git:https://github.com/tweea/matrixjavalib-main-genesis.git</connection>
+		<developerConnection>scm:git:https://github.com/tweea/matrixjavalib-main-genesis.git</developerConnection>
+		<url>https://github.com/tweea/matrixjavalib-main-genesis</url>
 	</scm>
 	<distributionManagement>
 		<snapshotRepository>
