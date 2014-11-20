@@ -44,7 +44,6 @@
 						</dependency>
 					</dependencies>
 					<configuration>
-						<encoding>UTF-8</encoding>
 						<configLocation>checkstyle.xml</configLocation>
 					</configuration>
 				</plugin>
@@ -58,7 +57,6 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.2</version>
 					<configuration>
-						<encoding>UTF-8</encoding>
 						<source>1.7</source>
 						<target>1.7</target>
 						<testSource>1.7</testSource>
@@ -89,7 +87,6 @@
 					<version>2.9.1</version>
 					<configuration>
 						<version>6</version>
-						<encoding>UTF-8</encoding>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -158,9 +155,6 @@
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>2.10.1</version>
 					<configuration>
-						<encoding>UTF-8</encoding>
-						<docencoding>UTF-8</docencoding>
-						<charset>UTF-8</charset>
 						<additionalJOption>-J-Xmx512M</additionalJOption>
 					</configuration>
 				</plugin>
@@ -168,10 +162,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jxr-plugin</artifactId>
 					<version>2.5</version>
-					<configuration>
-						<inputEncoding>UTF-8</inputEncoding>
-						<outputEncoding>UTF-8</outputEncoding>
-					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -184,7 +174,6 @@
 					<version>3.2</version>
 					<configuration>
 						<targetJdk>1.7</targetJdk>
-						<sourceEncoding>UTF-8</sourceEncoding>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -212,9 +201,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>2.7</version>
-					<configuration>
-						<encoding>UTF-8</encoding>
-					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -234,14 +220,11 @@
 					</dependencies>
 					<configuration>
 						<locales>zh_CN</locales>
-						<inputEncoding>UTF-8</inputEncoding>
-						<outputEncoding>UTF-8</outputEncoding>
 						<reportPlugins>
 							<plugin>
 								<groupId>org.apache.maven.plugins</groupId>
 								<artifactId>maven-checkstyle-plugin</artifactId>
 								<configuration>
-									<encoding>UTF-8</encoding>
 									<configLocation>checkstyle.xml</configLocation>
 								</configuration>
 							</plugin>
@@ -249,26 +232,18 @@
 								<groupId>org.apache.maven.plugins</groupId>
 								<artifactId>maven-javadoc-plugin</artifactId>
 								<configuration>
-									<encoding>UTF-8</encoding>
-									<docencoding>UTF-8</docencoding>
-									<charset>UTF-8</charset>
 									<additionalJOption>-J-Xmx512M</additionalJOption>
 								</configuration>
 							</plugin>
 							<plugin>
 								<groupId>org.apache.maven.plugins</groupId>
 								<artifactId>maven-jxr-plugin</artifactId>
-								<configuration>
-									<inputEncoding>UTF-8</inputEncoding>
-									<outputEncoding>UTF-8</outputEncoding>
-								</configuration>
 							</plugin>
 							<plugin>
 								<groupId>org.apache.maven.plugins</groupId>
 								<artifactId>maven-pmd-plugin</artifactId>
 								<configuration>
 									<targetJdk>1.7</targetJdk>
-									<sourceEncoding>UTF-8</sourceEncoding>
 								</configuration>
 							</plugin>
 							<plugin>
@@ -291,7 +266,6 @@
 								<groupId>org.codehaus.mojo</groupId>
 								<artifactId>taglist-maven-plugin</artifactId>
 								<configuration>
-									<encoding>UTF-8</encoding>
 									<tagListOptions>
 										<tagClasses>
 											<tagClass>
@@ -369,7 +343,6 @@
 					<artifactId>taglist-maven-plugin</artifactId>
 					<version>2.4</version>
 					<configuration>
-						<encoding>UTF-8</encoding>
 						<tagListOptions>
 							<tagClasses>
 								<tagClass>
