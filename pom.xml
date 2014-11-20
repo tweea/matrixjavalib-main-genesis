@@ -5,7 +5,7 @@
 	<!-- 基本属性 - 项目属性 -->
 	<groupId>net.sf.matrixjavalib</groupId>
 	<artifactId>genesis7</artifactId>
-	<version>35-SNAPSHOT</version>
+	<version>34-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<!-- 基本属性 - 属性 -->
@@ -388,7 +388,7 @@
 						</execution>
 						<execution>
 							<id>jacoco-site</id>
-							<phase>package</phase>
+							<phase>prepare-package</phase>
 							<goals>
 								<goal>report</goal>
 							</goals>
