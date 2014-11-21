@@ -41,7 +41,7 @@
 						<dependency>
 							<groupId>net.sf.matrixjavalib.build</groupId>
 							<artifactId>checkstyle-config</artifactId>
-							<version>1.8</version>
+							<version>1.9</version>
 						</dependency>
 					</dependencies>
 					<configuration>
@@ -159,6 +159,7 @@
 						<additionalJOption>-J-Xmx512M</additionalJOption>
 					</configuration>
 				</plugin>
+				<!-- TODO maven-jxr-plugin 文件编码错误 -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jxr-plugin</artifactId>
@@ -217,7 +218,7 @@
 						<dependency>
 							<groupId>net.sf.matrixjavalib.build</groupId>
 							<artifactId>checkstyle-config</artifactId>
-							<version>1.8</version>
+							<version>1.9</version>
 						</dependency>
 					</dependencies>
 					<configuration>
