@@ -418,6 +418,16 @@
 								<requireJavaVersion>
 									<version>[1.7,)</version>
 								</requireJavaVersion>
+								<requireMavenVersion>
+									<version>[3.1,)</version>
+								</requireMavenVersion>
+								<dependencyConvergence />
+								<requireUpperBoundDeps />
+								<bannedDependencies>
+									<excludes>
+										<exclude>commons-logging:commons-logging</exclude>
+									</excludes>
+								</bannedDependencies>
 							</rules>
 							<fail>true</fail>
 						</configuration>
@@ -478,9 +488,6 @@
 	</developers>
 
 	<!-- 构建环境 -->
-	<prerequisites>
-		<maven>3.1.0</maven>
-	</prerequisites>
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/tweea/matrixjavalib-main-genesis/issues</url>
