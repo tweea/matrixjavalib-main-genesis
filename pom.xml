@@ -39,7 +39,7 @@
                     <version>3.1.1</version>
                     <dependencies>
                         <dependency>
-                            <!-- 更新至 Sonar 使用版本 -->
+                            <!-- 更新至 SonarQube 使用版本 -->
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
                             <version>8.33</version>
@@ -436,7 +436,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <!-- TODO 使用 Sonar 配置 -->
+                <!-- TODO 使用 SonarQube 配置 -->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -449,7 +449,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <!-- TODO 使用 Sonar 配置 -->
+                <!-- TODO 使用 SonarQube 配置 -->
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
