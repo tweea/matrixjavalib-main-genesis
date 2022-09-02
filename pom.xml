@@ -36,18 +36,18 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>3.1.1</version>
+                    <version>3.2.0</version>
                     <dependencies>
                         <dependency>
                             <!-- 更新至 SonarQube 使用版本 -->
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.33</version>
+                            <version>9.3</version>
                         </dependency>
                         <dependency>
                             <groupId>net.sf.matrixjavalib.build</groupId>
                             <artifactId>checkstyle-config</artifactId>
-                            <version>1.16</version>
+                            <version>1.17</version>
                         </dependency>
                     </dependencies>
                     <configuration>
@@ -219,7 +219,7 @@
                         <dependency>
                             <groupId>net.sf.matrixjavalib.build</groupId>
                             <artifactId>checkstyle-config</artifactId>
-                            <version>1.16</version>
+                            <version>1.17</version>
                         </dependency>
                     </dependencies>
                     <configuration>
