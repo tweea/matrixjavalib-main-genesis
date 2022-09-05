@@ -24,6 +24,41 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>4.7.1.1</version>
+                    <dependencies>
+                        <dependency>
+                            <!-- 更新至 SonarQube 使用版本 -->
+                            <groupId>com.github.spotbugs</groupId>
+                            <artifactId>spotbugs</artifactId>
+                            <version>4.7.1</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.sf.matrixjavalib.build</groupId>
+                            <artifactId>checkstyle-config</artifactId>
+                            <version>18</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <includeFilterFile>spotbugs.xml</includeFilterFile>
+                        <plugins>
+                            <plugin>
+                                <!-- 更新至 SonarQube 使用版本 -->
+                                <groupId>com.h3xstream.findsecbugs</groupId>
+                                <artifactId>findsecbugs-plugin</artifactId>
+                                <version>1.12.0</version>
+                            </plugin>
+                            <plugin>
+                                <!-- 更新至 SonarQube 使用版本 -->
+                                <groupId>com.mebigfatguy.fb-contrib</groupId>
+                                <artifactId>fb-contrib</artifactId>
+                                <version>7.4.7</version>
+                            </plugin>
+                        </plugins>
+                    </configuration>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>3.0.0</version>
@@ -47,7 +82,7 @@
                         <dependency>
                             <groupId>net.sf.matrixjavalib.build</groupId>
                             <artifactId>checkstyle-config</artifactId>
-                            <version>1.17</version>
+                            <version>18</version>
                         </dependency>
                     </dependencies>
                     <configuration>
@@ -181,9 +216,9 @@
                     <version>3.18.0</version>
                     <dependencies>
                         <dependency>
-                            <groupId>net.greatsoft.build</groupId>
+                            <groupId>net.sf.matrixjavalib.build</groupId>
                             <artifactId>checkstyle-config</artifactId>
-                            <version>1.15</version>
+                            <version>18</version>
                         </dependency>
                         <dependency>
                             <!-- 更新至 SonarQube 使用版本 -->
@@ -255,7 +290,7 @@
                         <dependency>
                             <groupId>net.sf.matrixjavalib.build</groupId>
                             <artifactId>checkstyle-config</artifactId>
-                            <version>1.17</version>
+                            <version>18</version>
                         </dependency>
                     </dependencies>
                     <configuration>
@@ -296,11 +331,6 @@
                             </manifest>
                         </archive>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>findbugs-maven-plugin</artifactId>
-                    <version>3.0.5</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -444,6 +474,27 @@
     <reporting>
         <plugins>
             <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <configuration>
+                    <includeFilterFile>spotbugs.xml</includeFilterFile>
+                    <plugins>
+                        <plugin>
+                            <!-- 更新至 SonarQube 使用版本 -->
+                            <groupId>com.h3xstream.findsecbugs</groupId>
+                            <artifactId>findsecbugs-plugin</artifactId>
+                            <version>1.12.0</version>
+                        </plugin>
+                        <plugin>
+                            <!-- 更新至 SonarQube 使用版本 -->
+                            <groupId>com.mebigfatguy.fb-contrib</groupId>
+                            <artifactId>fb-contrib</artifactId>
+                            <version>7.4.7</version>
+                        </plugin>
+                    </plugins>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <configuration>
@@ -485,11 +536,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <!-- TODO 使用 SonarQube 配置 -->
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
