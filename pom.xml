@@ -178,7 +178,43 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-pmd-plugin</artifactId>
-                    <version>3.13.0</version>
+                    <version>3.18.0</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>net.greatsoft.build</groupId>
+                            <artifactId>checkstyle-config</artifactId>
+                            <version>1.15</version>
+                        </dependency>
+                        <dependency>
+                            <!-- 更新至 SonarQube 使用版本 -->
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-core</artifactId>
+                            <version>6.45.0</version>
+                        </dependency>
+                        <dependency>
+                            <!-- 更新至 SonarQube 使用版本 -->
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-java</artifactId>
+                            <version>6.45.0</version>
+                        </dependency>
+                        <dependency>
+                            <!-- 更新至 SonarQube 使用版本 -->
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-javascript</artifactId>
+                            <version>6.45.0</version>
+                        </dependency>
+                        <dependency>
+                            <!-- 更新至 SonarQube 使用版本 -->
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-jsp</artifactId>
+                            <version>6.45.0</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <rulesets>
+                            <ruleset>pmd.xml</ruleset>
+                        </rulesets>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -436,7 +472,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <!-- TODO 使用 SonarQube 配置 -->
+                <configuration>
+                    <rulesets>
+                        <ruleset>pmd.xml</ruleset>
+                    </rulesets>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
