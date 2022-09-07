@@ -5,7 +5,7 @@
     <!-- 基本属性 - 项目属性 -->
     <groupId>net.sf.matrixjavalib</groupId>
     <artifactId>genesis8</artifactId>
-    <version>39.1</version>
+    <version>40-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <!-- 基本属性 - 属性 -->
@@ -624,7 +624,7 @@
         <connection>scm:git:https://github.com/tweea/matrixjavalib-main-genesis.git</connection>
         <developerConnection>scm:git:https://github.com/tweea/matrixjavalib-main-genesis.git</developerConnection>
         <url>https://github.com/tweea/matrixjavalib-main-genesis</url>
-        <tag>genesis8-39.1</tag>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <snapshotRepository>
