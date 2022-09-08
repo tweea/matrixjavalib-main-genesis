@@ -446,6 +446,7 @@
                                 <requireUpperBoundDeps />
                                 <!-- Extra Enforcer Rules -->
                                 <banDuplicateClasses>
+                                    <findAllDuplicates>true</findAllDuplicates>
                                     <ignoreWhenIdentical>true</ignoreWhenIdentical>
                                 </banDuplicateClasses>
                                 <enforceBytecodeVersion>
