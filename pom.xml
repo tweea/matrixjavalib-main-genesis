@@ -4,7 +4,7 @@
 
     <!-- 基本属性 - 项目属性 -->
     <groupId>net.sf.matrixjavalib</groupId>
-    <artifactId>genesis8</artifactId>
+    <artifactId>genesis11</artifactId>
     <version>41-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -12,7 +12,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
+        <sonar.host.url>https://sonar.tweea.net.cn</sonar.host.url>
     </properties>
 
     <!-- 基本属性 - 项目关系 -->
@@ -284,6 +285,11 @@
                             <groupId>net.sf.matrixjavalib.build</groupId>
                             <artifactId>checkstyle-config</artifactId>
                             <version>18</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.maven.wagon</groupId>
+                            <artifactId>wagon-webdav-jackrabbit</artifactId>
+                            <version>3.5.2</version>
                         </dependency>
                     </dependencies>
                     <configuration>
@@ -589,21 +595,21 @@
     </reporting>
 
     <!-- 项目信息 -->
-    <name>Matrix :: Genesis for Java 8</name>
-    <description>Genesis 提供 Maven 构建支持，在项目间共享配置。</description>
-    <url>http://code.google.com/p/matrixjavalib/site/${project.groupId}/${project.artifactId}/${project.version}</url>
+    <name>Matrix :: Genesis</name>
+    <description>提供 Maven 构建支持，在项目间共享配置。</description>
+    <url>https://share.tweea.net.cn/mavensite/${project.groupId}/${project.artifactId}/${project.version}</url>
     <inceptionYear>2008</inceptionYear>
     <licenses>
         <license>
             <name>GNU General Public License</name>
             <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
             <distribution>manual</distribution>
-            <comments>Matrix 版权所有</comments>
+            <comments>Tweea Tang 版权所有</comments>
         </license>
     </licenses>
     <organization>
         <name>Matrix</name>
-        <url>http://www.matrix.net</url>
+        <url>http://www.tweea.net.cn</url>
     </organization>
     <developers>
         <developer>
@@ -617,8 +623,8 @@
         <url>https://github.com/tweea/matrixjavalib-main-genesis/issues</url>
     </issueManagement>
     <ciManagement>
-        <system>continuum</system>
-        <url>http://192.168.1.100:8082/continuum</url>
+        <system>Jenkins</system>
+        <url>https://jenkins.tweea.net.cn</url>
     </ciManagement>
     <scm>
         <connection>scm:git:https://github.com/tweea/matrixjavalib-main-genesis.git</connection>
@@ -628,15 +634,20 @@
     </scm>
     <distributionManagement>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <id>tweea.snapshot</id>
+            <name>Tweea Snapshot</name>
+            <url>https://nexus.tweea.net.cn/repository/maven-snapshots</url>
         </snapshotRepository>
         <repository>
             <id>sonatype-nexus-staging</id>
             <name>Nexus Release Repository</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
+        <site>
+            <id>tweea.site</id>
+            <name>Tweea Site</name>
+            <url>dav:https://share.tweea.net.cn/mavensite/${project.groupId}/${project.artifactId}/${project.version}</url>
+        </site>
     </distributionManagement>
     <profiles>
         <profile>
