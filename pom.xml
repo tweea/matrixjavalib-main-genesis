@@ -4,7 +4,7 @@
 
     <!-- 基本属性 - 项目属性 -->
     <groupId>net.sf.matrixjavalib</groupId>
-    <artifactId>genesis11</artifactId>
+    <artifactId>genesis8</artifactId>
     <version>43-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -12,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <sonar.host.url>https://sonar.tweea.net.cn</sonar.host.url>
     </properties>
 
@@ -81,9 +81,10 @@
                     <dependencies>
                         <dependency>
                             <!-- 更新至 SonarQube 使用版本 -->
+                            <!-- Java 8 最高版本 9.3 -->
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>10.9.3</version>
+                            <version>9.3</version>
                         </dependency>
                         <dependency>
                             <groupId>net.sf.matrixjavalib.build</groupId>
@@ -198,9 +199,7 @@
                     <version>3.8.0</version>
                     <configuration>
                         <additionalJOption>-J-Xmx512M</additionalJOption>
-                        <additionalOptions>
-                            <additionalOption>-package</additionalOption>
-                        </additionalOptions>
+                        <show>package</show>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -408,9 +407,10 @@
                     </executions>
                 </plugin>
                 <plugin>
+                    <!-- Java 8 最高版本 3.11.0.3922 -->
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
-                    <version>4.0.0.4121</version>
+                    <version>3.11.0.3922</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -547,9 +547,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <additionalJOption>-J-Xmx512M</additionalJOption>
-                    <additionalOptions>
-                        <additionalOption>-package</additionalOption>
-                    </additionalOptions>
+                    <show>package</show>
                 </configuration>
             </plugin>
             <plugin>
@@ -650,7 +648,7 @@
         <connection>scm:git:https://github.com/tweea/matrixjavalib-main-genesis.git</connection>
         <developerConnection>scm:git:https://github.com/tweea/matrixjavalib-main-genesis.git</developerConnection>
         <url>https://github.com/tweea/matrixjavalib-main-genesis</url>
-        <tag>genesis11-42</tag>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <snapshotRepository>
