@@ -198,9 +198,7 @@
                     <version>3.8.0</version>
                     <configuration>
                         <additionalJOption>-J-Xmx512M</additionalJOption>
-                        <additionalOptions>
-                            <additionalOption>-package</additionalOption>
-                        </additionalOptions>
+                        <show>package</show>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -547,9 +545,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <additionalJOption>-J-Xmx512M</additionalJOption>
-                    <additionalOptions>
-                        <additionalOption>-package</additionalOption>
-                    </additionalOptions>
+                    <show>package</show>
                 </configuration>
             </plugin>
             <plugin>
