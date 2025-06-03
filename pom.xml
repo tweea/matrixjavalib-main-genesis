@@ -411,6 +411,11 @@
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>4.0.0.4121</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.sonatype.central</groupId>
+                    <artifactId>central-publishing-maven-plugin</artifactId>
+                    <version>0.7.0</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -504,6 +509,14 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>sonatype-nexus-staging</publishingServerId>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -655,11 +668,6 @@
             <name>Tweea Snapshot</name>
             <url>https://nexus.tweea.net.cn/repository/maven-snapshots</url>
         </snapshotRepository>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
         <site>
             <id>tweea.site</id>
             <name>Tweea Site</name>
